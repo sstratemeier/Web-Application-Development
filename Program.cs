@@ -16,7 +16,6 @@ namespace Web_Application_Development
             CreateHostBuilder(args).Build().Run();
         }
 
-
         public static IHostBuilder CreateHostBuilder(string[] args)
         {
             Action<IWebHostBuilder> configure = (webBuilder) => webBuilder.UseStartup<Startup>();

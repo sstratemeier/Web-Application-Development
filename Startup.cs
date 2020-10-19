@@ -26,7 +26,7 @@ namespace Web_Application_Development
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
             // Serve default static files like index.html
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1
             app.UseDefaultFiles();

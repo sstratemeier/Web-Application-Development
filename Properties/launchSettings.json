@@ -22,6 +22,10 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Production": {
+      "commandName": "WAD-Production",
+      "applicationUrl": "http://localhost:80"
     }
   }
 }
