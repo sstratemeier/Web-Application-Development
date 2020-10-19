@@ -6,5 +6,8 @@
         {
             "path": "Abgabe_Minimalistischer_Webserver"
         }
+        {
+            "path": "workspace"
+        }
     ]
 }
