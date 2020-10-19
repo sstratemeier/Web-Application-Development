@@ -1,8 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+    "folders": [
+        {
+            "path": "Minimalistischer_Webserver"
+        },
+        {
+            "path": "Abgabe_Minimalistischer_Webserver"
+        }
+    ]
 }
