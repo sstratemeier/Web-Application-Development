@@ -16,11 +16,14 @@ namespace Web_Application_Development
             CreateHostBuilder(args).Build().Run();
         }
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                });
+
+        public static IHostBuilder CreateHostBuilder(string[] args)
+        {
+            Action<IWebHostBuilder> configure = (webBuilder) => webBuilder.UseStartup<Startup>();
+            IHostBuilder hostBuilder = Host
+                .CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(configure);
+            return hostBuilder;
+        }
     }
 }
