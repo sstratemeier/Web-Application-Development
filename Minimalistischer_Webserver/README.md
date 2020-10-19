@@ -1,13 +1,20 @@
-# Web-Application-Development
-- `dotnet new –l`
-- `dotnet new web`
-- `dotnet new gitignore`
-- `dotnet build  ./Web-Application-Development.csproj`
+# 262181 Web Application Development - Minimalistischer Webserver
+Webserver for static files. Serves files from folder `wwwroot`. If `http://localhost/foo/bar.xml` is called then file `${workingDirectory}/wwwroot/foo/bar.xml` is served.
 
-```
-GET /index.html HTTP/1.1
-Host: localhost
-User-Agent: Mozilla/5.0
-```
 
-`dotnet publish --configuration Release`
+## Requirements
+- .NET Core 3.1
+
+## Routes
+- `http://localhost:80/index.html` => serve index.html
+- `http://localhost:80/foo/bar.xml` => serve bar.xml
+
+## Port definition
+The port is defined under `appsettings.json`
+It can be changed by setting the Urls property. E.g. to port 8080:
+```javascript
+{
+  ...
+  "Urls": "http://localhost:8080"
+}
+```
