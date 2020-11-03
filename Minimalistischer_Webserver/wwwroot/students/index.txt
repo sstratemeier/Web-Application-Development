@@ -1,0 +1,15 @@
+Id: 1
+Name: Simon Stratemeier
+Studiengang: SEB
+Fachsemester: 7
+Profilbild: ../profilepicture.jpeg
+GitLab Repo: https://git.it.hs-heilbronn.de/it/courses/seb/webdev/webdev-ws-2021/sstratem/minimalistischer-web-server
+Zitat: Ich habe mich für Web Application Development (https://www.hs-heilbronn.de/webdev) entschieden weil ich evaluiere, ob ich eine Bachelor-Thesis beim Professor dieser Vorlesung durchführen möchte.
+
+Id: 2
+Name: Simon Demo
+Studiengang: SEB
+Fachsemester: 7
+Profilbild: ../profilepicture.jpeg
+GitLab Repo: https://git.it.hs-heilbronn.de/it/courses/seb/webdev/webdev-ws-2021/sstratem/minimalistischer-web-server
+Zitat: Ich habe mich für Web Application Development (https://www.hs-heilbronn.de/webdev) entschieden weil ich evaluiere, ob ich eine Bachelor-Thesis beim Professor dieser Vorlesung durchführen möchte.
