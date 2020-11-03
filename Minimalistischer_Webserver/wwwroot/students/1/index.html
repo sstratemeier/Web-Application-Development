@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Student: Simon Stratemeier</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .background-card {
+            position: absolute;
+            top: 18px;
+            left: 28px;
+            width: 768px;
+            height: 483px;
+            background-color: #8faadc;
+            border: 2px solid #2e528f;
+            border-radius: 80px;
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-template-rows: auto 130px 175px;
+        }
+
+        .foreground-card {
+            position: absolute;
+            top: 200px;
+            left: 332px;
+            width: 591px;
+            height: 337px;
+            background-color: #4472c4;
+            border: 2px solid #2e528f;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .reference {
+            z-index: 1;
+            position: absolute;
+            opacity: 0.3;
+            top: 0;
+            left: 0;
+        }
+
+        .profile-picture-area {
+            grid-area: 1 / 1 / 3 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gitlab-repo-area {
+            grid-area: 3 / 1 / 4 / 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .user-details-area {
+            grid-area: 1 / 2 / 2 / 3;
+            display: flex;
+            align-items: center;
+            padding-left: 16px;
+            color: black;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .profile-picture {
+            width: 235px;
+            height: 235px;
+            border-radius: 200px;
+        }
+
+        .gitlab-repo-header {
+            color: black;
+            font-size: 26px;
+            padding: 3px;
+            margin-top: 10px;
+        }
+
+        .citate-area::before {
+            content: '\201D';
+            color: white;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            font-size: 140px;
+            text-align: center;
+        }
+
+        .citate-area {
+            flex: auto;
+            padding: 40px 30px 20px 100px;
+            color: white;
+            font-size: 26px;
+        }
+
+        .hhn-logo {
+            height: 80px;
+            float: right;
+            margin: 20px;
+        }
+
+        .link:hover {
+            font-weight: 600;
+        }
+
+        .hoverable-image {
+            transition: padding 0.5s, box-shadow 0.5s;
+            padding: 5px;
+        }
+
+        .hoverable-image:hover {
+            padding-top: 2px;
+            padding-bottom: 8px;
+            box-shadow: 0 1px 5px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-card">
+        <div class="profile-picture-area">
+            <img class='profile-picture' src="profilepicture.jpeg" alt="Profilbild" />
+        </div>
+        <div class="gitlab-repo-area">
+            <a class="gitlab-repo-header link"
+                href="https://git.it.hs-heilbronn.de/it/courses/seb/webdev/webdev-ws-2021/sstratem/minimalistischer-web-server">GitLab
+                Repo</a>
+            <!-- Gitlab Logo by Gitlab is licences under CC BY-NC-SA 4.0 -->
+            <!-- Trademark Information for logo: https://about.gitlab.com/handbook/marketing/growth-marketing/brand-and-digital-design/brand-guidelines/#trademark -->
+            <svg width="70" height="70" class="hoverable-image" viewBox="0 0 36 36">
+                <path fill="#e24329" d="M2 14l9.38 9v-9l-4-12.28c-.205-.632-1.176-.632-1.38 0z"></path>
+                <path fill="#e24329" d="M34 14l-9.38 9v-9l4-12.28c.205-.632 1.176-.632 1.38 0z"></path>
+                <path fill="#e24329" d="M18,34.38 3,14 33,14 Z"></path>
+                <path fill="#fc6d26" d="M18,34.38 11.38,14 2,14 6,25Z"></path>
+                <path fill="#fc6d26" d="M18,34.38 24.62,14 34,14 30,25Z"></path>
+                <path fill="#fca326" d="M2 14L.1 20.16c-.18.565 0 1.2.5 1.56l17.42 12.66z"></path>
+                <path fill="#fca326" d="M34 14l1.9 6.16c.18.565 0 1.2-.5 1.56L18 34.38z"></path>
+            </svg>
+        </div>
+        <div class="user-details-area">
+            Name: Simon Stratemeier<br>
+            Studiengang: SEB<br>
+            Fachsemester: 7
+        </div>
+    </div>
+    <div class="foreground-card">
+        <div class="citate-area">
+            Ich habe mich f&uuml;r <a href="https://www.hs-heilbronn.de/webdev" class="link" style="color:white">Web
+                Application Development</a> entschieden weil ich evaluiere, ob ich eine Bachelor-Thesis beim Professor dieser Vorlesung durzuf&uuml;hren m&ouml;chte.
+        </div>
+        <div class="logo-area">
+            <!-- Image (https://de.wikipedia.org/wiki/Datei:Logo_HHN.png) by Hochschule Heilbronn is licenced under CC BY-SA 4.0-->
+            <img class="hhn-logo" src="Logo_HHN.png" alt="Logo Hochschule Heilbronn"/>
+        </div>
+    </div>
+</body>
+
+</html>
