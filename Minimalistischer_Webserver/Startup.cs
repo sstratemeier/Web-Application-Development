@@ -1,5 +1,6 @@
 
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -26,6 +27,26 @@ namespace Web_Application_Development
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // Url rewrite if Content-Type: text/plain and index.txt exists
+            // https://weblog.west-wind.com/posts/2020/Mar/13/Back-to-Basics-Rewriting-a-URL-in-ASPNET-Core#summary
+            app.Use(async (context, next) =>
+            {
+                var url = context.Request.Path.Value;
+                var acceptHeaders = context.Request.Headers["Accept"];
+
+                // If txt file is requested on a folder then try to resolve a text representation of that folder
+                if (acceptHeaders.Contains("text/plain")
+                    && Directory.Exists(env.ContentRootPath + "/wwwroot" + url)
+                    && File.Exists(env.ContentRootPath + "/wwwroot" + url + "index.txt"))
+                {
+                    // rewrite and continue processing
+                    context.Request.Path = url + "/index.txt";
+                }
+
+                await next();
+            });
+
 
             // Serve default static files like index.html
             // https://docs.microsoft.com/en-us/aspnet/core/fundamentals/static-files?view=aspnetcore-3.1
